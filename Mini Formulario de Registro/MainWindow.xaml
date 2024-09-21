@@ -1,0 +1,274 @@
+﻿<Window x:Class="Mini_Formulario_de_Registro.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mini_Formulario_de_Registro"
+        mc:Ignorable="d"
+        Title="LoginView" Height="550" Width="400"
+        WindowStyle="none"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True"
+        MouseDown="Window_MouseDown">
+
+
+    <Border CornerRadius="12">
+        
+
+        <Border CornerRadius="10"
+            BorderThickness="1"
+            Opacity="0.95">
+
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#B0C4D6" Offset="0"/>
+                    <GradientStop Color="#4DD0E1" Offset="0.75"/>
+                    <GradientStop Color="#F0F4F8" Offset="1"/>
+
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                    <GradientStop Color="#003B5C" Offset="0"/>
+                    <GradientStop Color="#007B99" Offset="0.75"/>
+                </LinearGradientBrush>
+            </Border.Background>
+
+            <Grid>
+
+
+
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30px"/>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="30px"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30px"/>
+                    <RowDefinition/>
+
+
+                </Grid.RowDefinitions>
+
+
+                <Button x:Name="btnClose"
+                        BorderThickness="0"
+                        Content="x"
+                        Foreground="White"
+                        FontSize="12"
+                        FontFamily="Montserrat"
+                        Cursor="Hand"
+                        Grid.Column="3"
+                        Click="btnClose_Click">
+
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#28AEED"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#278BEF"/>
+                                </Trigger>
+
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="18" Height="18"
+                CornerRadius="9"
+                Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                              HorizontalAlignment="Center"/>
+
+                            </Border>
+
+                        </ControlTemplate>
+                    </Button.Template>
+
+                </Button>
+
+                <StackPanel Grid.Row="1" Grid.Column="1">
+
+                    <TextBlock Text="Mini Formulario de Registro"
+                               FontSize="18"
+                               TextAlignment="Center"
+                               Margin="0,60,0,0"
+                               Foreground="White"
+                               FontFamily="Montserrat">
+
+                    </TextBlock>
+
+                    <TextBlock Text="Nombre"
+                               x:Name="nombre"
+                                FontSize="12"
+                                TextAlignment="Left"
+                                Margin="0,60,0,0"
+                                Foreground="LightGray"
+                                FontFamily="Montserrat">
+
+                    </TextBlock>
+
+                    <TextBox x:Name="txtNombre"
+                             FontSize="13"
+                             FontWeight="Medium"
+                             FontFamily="Montserrat"
+                             Foreground="white"
+                             Background="Transparent"
+                             CaretBrush="LightGray"
+                             BorderBrush="DarkGray"
+                             BorderThickness="0,0,0,1"
+                             Height="28"
+                             VerticalContentAlignment="Center"
+                             Padding="30,0,0,0"/>
+
+
+                    <!-- Correo electronico -->
+
+                    <TextBlock Text="Correo electrónico"
+                               x:Name="correo"
+                            FontSize="12"
+                            TextAlignment="Left"
+                            Margin="0,40,0,0"
+                            Foreground="LightGray"
+                           FontFamily="Montserrat">
+
+                    </TextBlock>
+
+                    <TextBox x:Name="txtCorreo"
+                            FontSize="13"
+                            FontWeight="Medium"
+                            FontFamily="Montserrat"
+                            Foreground="white"
+                            Background="Transparent"
+                            CaretBrush="LightGray"
+                            BorderBrush="DarkGray"
+                            BorderThickness="0,0,0,1"
+                            Height="28"
+                            VerticalContentAlignment="Center"
+                            Padding="30,0,0,0"/>
+
+
+                    <!-- Direccion -->
+
+                    <TextBlock Text="Dirección"
+                               x:Name="direccion"
+                            FontSize="12"
+                            TextAlignment="Left"
+                            Margin="0,40,0,0"
+                            Foreground="LightGray"
+                           FontFamily="Montserrat">
+
+                    </TextBlock>
+
+                    <TextBox x:Name="txtDireccion"
+                            FontSize="13"
+                            FontWeight="Medium"
+                            FontFamily="Montserrat"
+                            Foreground="white"
+                            Background="Transparent"
+                            CaretBrush="LightGray"
+                            BorderBrush="DarkGray"
+                            BorderThickness="0,0,0,1"
+                            Height="28"
+                            VerticalContentAlignment="Center"
+                            Padding="30,0,0,0"/>
+
+
+                    <!-- Telefono -->
+
+                    <TextBlock Text="Teléfono"
+                               x:Name="telefono"
+                            FontSize="12"
+                            TextAlignment="Left"
+                            Margin="0,30,0,0"
+                            Foreground="LightGray"
+                           FontFamily="Montserrat">
+
+                    </TextBlock>
+
+                    <TextBox x:Name="txtTelelefono"
+                            FontSize="13"
+                            FontWeight="Medium"
+                            FontFamily="Montserrat"
+                            Foreground="white"
+                            Background="Transparent"
+                            CaretBrush="LightGray"
+                            BorderBrush="DarkGray"
+                            BorderThickness="0,0,0,1"
+                            Height="28"
+                            VerticalContentAlignment="Center"
+                            Padding="30,0,0,0"/>
+
+                    <Grid Margin="0,40,0,0">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition/>
+
+                        </Grid.ColumnDefinitions>
+
+
+
+                        <!-- El boton xd -->
+
+                        <Button x:Name="btnRegistrar" 
+                            BorderThickness="0"
+                            Content="ENVIAR"
+                            Foreground="White"
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Grid.Column="1"
+                                Click="btnRegistrar_Click">
+
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="#28AEED"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#462AD8"/>
+                                        </Trigger>
+
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Width="92" Height="30"
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+                                        <ContentPresenter VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"/>
+
+                                    </Border>
+
+                                </ControlTemplate>
+                            </Button.Template>
+
+                        </Button>
+
+                        <CheckBox x:Name="miCheckBox" Grid.Column="0" Content="Aceptas los términos y condiciones"
+                              Foreground="white"
+                              HorizontalAlignment="Left"
+                              VerticalAlignment="Center">
+
+                        </CheckBox>
+
+                    </Grid>
+
+                </StackPanel>
+
+            </Grid>
+
+        </Border>
+    </Border>
+    
+
+</Window>
